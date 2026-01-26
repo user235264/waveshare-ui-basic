@@ -16,22 +16,10 @@ static lv_color_t buf2[ LVGL_BUF_LEN];
     Displays LVGL content on the LCD
     This function implements associating LVGL data to the LCD screen
 */
-void Lvgl_Display_LCD(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p)
+void Lvgl_Display_LCD( lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p )
 {
-    int32_t w = (area->x2 - area->x1 + 1);
-    int32_t h = (area->y2 - area->y1 + 1);
-    int32_t size = w * h;
-
-    // Remap green to blue before writing to the display
-    for (int32_t i = 0; i < size; i++) {
-        // This assumes LV_COLOR_DEPTH == 16 (RGB565)
-        if (color_p[i].full == lv_color_hex(0x00FF00).full) {
-            color_p[i] = lv_color_hex(0x0000FF); // Blue
-        }
-    }
-
-    LCD_addWindow(area->x1, area->y1, area->x2, area->y2, (uint16_t *)&color_p->full);
-    lv_disp_flush_ready(disp_drv);
+  LCD_addWindow(area->x1, area->y1, area->x2, area->y2, ( uint16_t *)&color_p->full);
+  lv_disp_flush_ready( disp_drv );
 }
 /*Read the touchpad*/
 void Lvgl_Touchpad_Read( lv_indev_drv_t * indev_drv, lv_indev_data_t * data )
@@ -102,4 +90,3 @@ void Lvgl_Loop(void)
 {
   lv_timer_handler(); /* let the GUI do its work */
 }
-
