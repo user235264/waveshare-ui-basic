@@ -10,7 +10,7 @@
 extern "C" {
 #endif
 
-void MuteButton(lv_event_t * e);
+void on_mute_button_event(lv_event_t * e);
 void on_ptt_switch_changed(lv_event_t * e);
 void ui_event_playThroughSwitch(lv_event_t * e);
 void ui_event_gainSlider(lv_event_t * e);

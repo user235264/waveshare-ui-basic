@@ -89,3 +89,8 @@ void ui_event_filterBypassSwitch(lv_event_t * e)
 {
 	// Your code here
 }
+
+void on_mute_button_event(lv_event_t * e)
+{
+	// Your code here
+}

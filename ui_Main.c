@@ -38,7 +38,7 @@ void ui_event_Mute_Button(lv_event_t * e)
 
     if(event_code == LV_EVENT_VALUE_CHANGED) {
         (e);
-        MuteButton(e);
+        on_mute_button_event(e);
     }
 }
 
