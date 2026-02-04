@@ -7,12 +7,20 @@
 
 void MuteButton(lv_event_t * e)
 {
-	// Your code here
+	// Call bluetooth mute function
+	ble_mute_from_ui();
 }
 
 void on_ptt_switch_changed(lv_event_t * e)
 {
-	// Your code here
+	// Get the switch object
+	lv_obj_t * switch_obj = lv_event_get_target(e);
+	
+	// Get the switch state (checked = 1, unchecked = 0)
+	int state = lv_obj_has_state(switch_obj, LV_STATE_CHECKED) ? 1 : 0;
+	
+	// Send PTT state via bluetooth
+	ble_ptt_from_ui(state);
 }
 
 void ui_event_playThroughSwitch(lv_event_t * e)
@@ -27,7 +35,8 @@ void ui_event_gainSlider(lv_event_t * e)
 
 void ui_BluetoothStatusLabel(lv_event_t * e)
 {
-	// Your code here
+	// Update bluetooth status display
+	ble_update_status_ui();
 }
 
 void on_brightness_slider_changed(lv_event_t * e)
@@ -101,4 +110,34 @@ void ui_event_filterBypassSwitch(lv_event_t * e)
 void ble_mute_from_ui(void)
 {
 	// Your code here - implement BLE mute functionality
+}
+
+/**
+ * @brief BLE PTT (Push-to-Talk) Function
+ * 
+ * This function handles PTT state changes via Bluetooth.
+ * Called when the PTT switch is toggled in the UI.
+ * 
+ * @param state The PTT state: 1 for active (pushed), 0 for inactive (released)
+ * 
+ * TODO: Implement actual BLE communication to send PTT state
+ */
+void ble_ptt_from_ui(int state)
+{
+	// Your code here - implement BLE PTT functionality
+	// Example: Send PTT command via BLE with the state parameter
+}
+
+/**
+ * @brief Update Bluetooth Status UI
+ * 
+ * This function updates the bluetooth status display in the UI.
+ * Should be called when bluetooth connection status changes.
+ * 
+ * TODO: Implement BLE status reading and UI update
+ */
+void ble_update_status_ui(void)
+{
+	// Your code here - implement BLE status update
+	// Example: Read BLE connection status and update ui_uiBluetoothStatusLabel
 }

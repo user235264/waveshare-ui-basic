@@ -28,6 +28,8 @@ void ui_event_binauralModeRadioGroup(lv_event_t * e);
 void ui_event_lowPassSlider(lv_event_t * e);
 void ui_event_filterBypassSwitch(lv_event_t * e);
 void ble_mute_from_ui(void);
+void ble_ptt_from_ui(int state);
+void ble_update_status_ui(void);
 
 #ifdef __cplusplus
 } /*extern "C"*/
