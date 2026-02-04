@@ -90,6 +90,14 @@ void ui_event_filterBypassSwitch(lv_event_t * e)
 	// Your code here
 }
 
+/**
+ * @brief BLE Mute Function
+ * 
+ * This function handles muting functionality via Bluetooth.
+ * Called from the UI event handlers when mute button is triggered.
+ * 
+ * TODO: Implement actual BLE communication to send mute command
+ */
 void ble_mute_from_ui(void)
 {
 	// Your code here - implement BLE mute functionality
