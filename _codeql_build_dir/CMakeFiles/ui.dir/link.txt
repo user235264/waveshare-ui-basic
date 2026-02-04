@@ -1,2 +1,0 @@
-/usr/bin/ar qc libui.a CMakeFiles/ui.dir/ui_Main.c.o CMakeFiles/ui.dir/ui_Auto_Dim_Switch.c.o CMakeFiles/ui.dir/ui_App_Settings.c.o CMakeFiles/ui.dir/ui.c.o CMakeFiles/ui.dir/ui_comp_hook.c.o CMakeFiles/ui.dir/ui_helpers.c.o CMakeFiles/ui.dir/ui_events.cpp.o
-/usr/bin/ranlib libui.a
