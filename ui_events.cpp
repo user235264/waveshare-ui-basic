@@ -89,3 +89,8 @@ void ui_event_filterBypassSwitch(lv_event_t * e)
 {
 	// Your code here
 }
+
+void ble_mute_from_ui(void)
+{
+	// Your code here - implement BLE mute functionality
+}

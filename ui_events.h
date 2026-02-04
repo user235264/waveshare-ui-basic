@@ -27,6 +27,7 @@ void ui_event_binauralVolumeSlider(lv_event_t * e);
 void ui_event_binauralModeRadioGroup(lv_event_t * e);
 void ui_event_lowPassSlider(lv_event_t * e);
 void ui_event_filterBypassSwitch(lv_event_t * e);
+void ble_mute_from_ui(void);
 
 #ifdef __cplusplus
 } /*extern "C"*/
