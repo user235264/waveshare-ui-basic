@@ -99,6 +99,56 @@ void ui_event_filterBypassSwitch(lv_event_t * e)
 	// Your code here
 }
 
+void onMicGainArcChanged(lv_event_t * e)
+{
+	// Your code here
+}
+
+void onHFSliderChanged(lv_event_t * e)
+{
+	// Your code here
+}
+
+void NoiseMaskingVolumeSlider(lv_event_t * e)
+{
+	// Your code here
+}
+
+void onNoiseMaskingModeChanged(lv_event_t * e)
+{
+	// Your code here
+}
+
+void onNoiseMaskingSwitchChanged(lv_event_t * e)
+{
+	// Your code here
+}
+
+void onBinauralBeatsSwitchChanged(lv_event_t * e)
+{
+	// Your code here
+}
+
+void BinauralBeatsIntensitySlider(lv_event_t * e)
+{
+	// Your code here
+}
+
+void ui_event_Binural_Roller(lv_event_t * e)
+{
+	// Your code here
+}
+
+void onLFSliderChanged(lv_event_t * e)
+{
+	// Your code here
+}
+
+void onFiltersSwitchChanged(lv_event_t * e)
+{
+	// Your code here
+}
+
 /**
  * @brief BLE Mute Function
  * 
